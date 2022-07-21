@@ -17,5 +17,5 @@ ingredients.map((ingridient) => {
 
   htmlIngridientsEl.append(newEl)
 })
-console.log(htmlIngridientsEl)
+
 

@@ -17,6 +17,63 @@ const images = [
 
 
 
+const imagesListEl = document.querySelector(".gallery")
+
+const makeImagesCard = ({ url, alt } = {}) => {
+  return `
+   <li class="gallery">
+        <img
+        src="${url}"
+         alt="${alt}"
+         width = "400"
+         height = "200"
+       />
+   </li>
+   `;
+};
+
+imagesListEl.style.display = "flex"
+
+
+const imagesCardsArr = images.map((el, index, arr) => {
+return makeImagesCard(el)
+})
+
+imagesListEl.insertAdjacentHTML("afterbegin", imagesCardsArr.join("")) 
+
+
+
+// imagesListEl.innerHTML = imagesCardsArr.join("")
+
+
+// const imagesCard = makeImagesCard(images[0])
+
+
+// imagesListEl.innerHTML = imagesCard
+// console.log(imagesCard)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const imagesListEl = document.querySelector(".gallery")
 
 
@@ -42,46 +99,3 @@ const images = [
 
 
 // imagesListEl.append(...imagesArr)
-
-
-
-
-
-
-
-
-
-const imagesListEl = document.querySelector(".gallery")
-
-const makeImagesCard = ({ url, alt } = {}) => {
-  return `
-   <li class="gallery">
-        <img
-        src="${url}"
-         alt="${alt}"
-         width = "400"
-       />
-   </li>
-   `;
-};
-
-imagesListEl.style.display = "flex"
-
-
-const imagesCardsArr = images.map((el, index, arr) => {
-
-return makeImagesCard(el)
-})
-
-imagesListEl.insertAdjacentHTML("afterbegin", imagesCardsArr.join("")) 
-
-
-
-// imagesListEl.innerHTML = imagesCardsArr.join("")
-
-
-// const imagesCard = makeImagesCard(images[0])
-
-
-// imagesListEl.innerHTML = imagesCard
-// console.log(imagesCard)

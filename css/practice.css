@@ -1,38 +1,21 @@
 body {
-    padding: 16px;
+    margin: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
 }
 
-.list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.list-item {
-    display: flex;
-    align-items: center;
+input {
+    width: 100%;
+    max-width: 320px;
     padding: 8px;
-    border-width: 2px;
-    border-style: dashed;
+    font: inherit;
+    letter-spacing: inherit;
 }
 
-.list-item.new::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    margin-right: 8px;
-    border-radius: 50%;
-    background-color: green;
-}
-
-.list-item:nth-child(even) {
-    border-color: tomato;
-}
-
-.list-item:nth-child(odd) {
-    border-color: blueviolet;
-}
-
-.list-item:not(:last-child) {
-    margin-bottom: 8px;
+button {
+    display: inline-flex;
+    padding: 4px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
