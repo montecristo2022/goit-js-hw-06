@@ -12,6 +12,7 @@ function handleSubmit(event) {
    
   } = event.currentTarget;
 
+
   if (email.value === "" || password.value === "") {
     alert("ты кусок говна, ублюдок, мать твою, почему ты не ввел пароль или логин?!");
   } else {

@@ -10,12 +10,16 @@ const ingredients = [
 const htmlIngridientsEl = document.querySelector("#ingredients")
 
 
-ingredients.map((ingridient) => {
+ const newArray =  ingredients.map((ingridient) => {
   const newEl = document.createElement("li");
   newEl.textContent = (ingridient)
   newEl.classList.add("item")
 
-  htmlIngridientsEl.append(newEl)
-})
+ return newEl
+ })
+
+ htmlIngridientsEl.append(...newArray)
+
+
 
 
